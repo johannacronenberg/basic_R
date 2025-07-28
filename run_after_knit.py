@@ -23,15 +23,15 @@ chapters = {
 }
 
 for language in ["deutsch", "english"]:
-	path = language + "/docs"
+	path = language + "/_book"
 	for file in os.listdir(path):
 		if file.endswith(".html"):
 			if "deutsch" in path:
 				replacement(os.path.join(path, file), '<a href="./">Programmieren in R: eine Einführung</a>', '<a href="./index.html">Programmieren in R: eine Einführung</a>')
-				link = '<div class="book-header" role="navigation">\n\t\t\t<a class="btn pull-right js-toolbar-action" href="' + '../../english/book-output/' + chapters[os.path.splitext(file)[0]] + '.html"><i class="fa fa-language"></i></a>'
+				link = '<div class="book-header" role="navigation">\n\t\t\t<a class="btn pull-right js-toolbar-action" href="' + '../../english/_book/' + chapters[os.path.splitext(file)[0]] + '.html"><i class="fa fa-language"></i></a>'
 				replacement(os.path.join(path, file), '<div class="book-header" role="navigation">', link)
 			else:
 				replacement(os.path.join(path, file), '<a href="./">Programming in R: An Introduction</a>', '<a href="./index.html">Programming in R: An Introduction</a>')
-				link = '<div class="book-header" role="navigation">\n\t\t\t<a class="btn pull-right js-toolbar-action" href="' + '../../deutsch/book-output/' + list(chapters.keys())[list(chapters.values()).index(os.path.splitext(file)[0])] + '.html"><i class="fa fa-language"></i></a>'
+				link = '<div class="book-header" role="navigation">\n\t\t\t<a class="btn pull-right js-toolbar-action" href="' + '../../deutsch/_book/' + list(chapters.keys())[list(chapters.values()).index(os.path.splitext(file)[0])] + '.html"><i class="fa fa-language"></i></a>'
 				replacement(os.path.join(path, file), '<div class="book-header" role="navigation">', link)
 
