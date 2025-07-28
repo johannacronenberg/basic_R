@@ -15,6 +15,7 @@ bookdown::gitbook:
     download: ["rmd"]
     sharing: null
     info: false
+    base_url: "/book-output/"
 bookdown::html_chapters:
   css: [style.css, toc.css]
 latex_engine: xelatex
