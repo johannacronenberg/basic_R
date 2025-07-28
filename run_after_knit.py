@@ -23,7 +23,7 @@ chapters = {
 }
 
 for language in ["deutsch", "english"]:
-	path = language + "/book-output"
+	path = language + "/docs"
 	for file in os.listdir(path):
 		if file.endswith(".html"):
 			if "deutsch" in path:

@@ -48,7 +48,7 @@ lapply(names(githubs), function(pkg) {
 
 ## Installation und Kursverzeichnis
 
-- Laden Sie die [Statistik-Software R](https://ftp.fau.de/cran/) herunter und installieren Sie sie. Die neueste Version ist derzeit `4.3.x` (Stand: März 2024).
+- Laden Sie die [Statistik-Software R](https://ftp.fau.de/cran/) herunter und installieren Sie sie. Die neueste Version ist derzeit `4.5.x` (Stand: Juli 2025).
 
 - Laden Sie außerdem [RStudio](https://rstudio.com/products/rstudio/download/#download) herunter und installieren Sie es.
 

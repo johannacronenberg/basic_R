@@ -48,7 +48,7 @@ lapply(names(githubs), function(pkg) {
 
 ## Installation
 
-- Download and install the [Software R](https://ftp.fau.de/cran/). The latest version is currently `4.3.x` (March 2024).
+- Download and install the [Software R](https://ftp.fau.de/cran/). The latest version is currently `4.5.x` (July 2025).
 
 - Also download and install [RStudio](https://RStudio.com/products/RStudio/download/#download).
 
