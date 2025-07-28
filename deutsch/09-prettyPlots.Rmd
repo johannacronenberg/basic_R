@@ -1,4 +1,4 @@
-# Pretty Plots
+# Plotting
 
 Laden Sie die folgenden Packages und Data Frames:
 

@@ -5,15 +5,15 @@ language:
 delete_merged_file: true
 output_dir: "_book"
 rmd_files: [
-  "index.Rmd",
-  "01-firstCalcs.Rmd",
-  "02-dataFrames.Rmd",
-  "03-tidyverse.Rmd",
-  "04-summaryStats.Rmd",
-  "05-tidyverse.Rmd",
-  "06-plots.Rmd",
-  "07-tidyr.Rmd",
-  "08-joins.Rmd",
-  "09-prettyPlots.Rmd"
+  "index_eng.Rmd",
+  "01-firstCalcs_eng.Rmd",
+  "02-dataFrames_eng.Rmd",
+  "03-tidyverse_eng.Rmd",
+  "04-summaryStats_eng.Rmd",
+  "05-tidyverse_eng.Rmd",
+  "06-plots_eng.Rmd",
+  "07-tidyr_eng.Rmd",
+  "08-joins_eng.Rmd",
+  "09-prettyPlots_eng.Rmd"
 ]
 

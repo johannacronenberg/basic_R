@@ -1,4 +1,4 @@
-# Data Frames
+# Datensätze (Data Frames)
 
 Eine äußerst wichtige Datenstruktur in R ist der Data Frame. Das ist eine zwei-dimensionale Tabelle. Die Zeilen werden auch *observations* genannt und die Spalten *variables* (nicht zu verwechseln mit den Variablen, d.h. abgespeicherten Werten und Objekten, wie im vorherigen Kapitel besprochen!). In der Phonetik arbeiten wir sehr häufig mit Data Frames, z.B. wenn wir akustische Informationen aus Sprachaufnahmen oder Messungen aus einem Perzeptionsexperiment extrahiert haben und diese auswerten oder statistisch analysieren wollen.
 

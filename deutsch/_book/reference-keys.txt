@@ -18,7 +18,7 @@ vektoren
 arithmetik-und-logische-operatoren
 vektoren-manipulieren
 faktoren
-data-frames
+datensätze-data-frames
 import-export
 eigenschaften
 auf-spalten-zugreifen
@@ -30,7 +30,7 @@ selecting
 mutating
 renaming
 weitere-beispiele-für-komplexe-pipes
-summary-statistics
+deskriptive-statistik
 mittelwert-median
 varianz-standardabweichung
 quantile
@@ -52,7 +52,7 @@ mutating-joins
 inner-join
 outer-join
 filtering-joins
-pretty-plots
+plotting
 achsenbeschriftungen
 koordinatensystem-begrenzen
 farben

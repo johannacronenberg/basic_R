@@ -1,4 +1,4 @@
-# Summary Statistics
+# Deskriptive Statistik
 
 Für dieses Kapitel benötigen Sie die folgenden Packages und den folgenden Data Frame:
 
