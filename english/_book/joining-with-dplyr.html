@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>9 Joining with dplyr | Programming in R: An Introduction for Phoneticians</title>
   <meta name="description" content="An introduction to data processing in R focussing on tidyverse. This introduction was written as study material for the students of the Institute of Phonetics and Speech Processing at the University of Munich." />
-  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
   <meta property="og:title" content="9 Joining with dplyr | Programming in R: An Introduction for Phoneticians" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Johanna Cronenberg" />
 
 
-<meta name="date" content="2025-07-28" />
+<meta name="date" content="2026-10-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,8 +55,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -66,7 +67,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -153,7 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="1.6" data-path="setup.html"><a href="setup.html#help"><i class="fa fa-check"></i><b>1.6</b> Help</a>
 <ul>
-<li class="chapter" data-level="1.6.1" data-path="setup.html"><a href="setup.html#recognising-errors"><i class="fa fa-check"></i><b>1.6.1</b> Recognising Errors</a></li>
+<li class="chapter" data-level="1.6.1" data-path="setup.html"><a href="setup.html#recognizing-errors"><i class="fa fa-check"></i><b>1.6.1</b> Recognizing Errors</a></li>
 <li class="chapter" data-level="1.6.2" data-path="setup.html"><a href="setup.html#ask-the-community"><i class="fa fa-check"></i><b>1.6.2</b> Ask the Community</a></li>
 <li class="chapter" data-level="1.6.3" data-path="setup.html"><a href="setup.html#help-with-ggplot2"><i class="fa fa-check"></i><b>1.6.3</b> Help with <code>ggplot2</code></a></li>
 <li class="chapter" data-level="1.6.4" data-path="setup.html"><a href="setup.html#statistics-in-r-literature"><i class="fa fa-check"></i><b>1.6.4</b> Statistics in R: Literature</a></li>
@@ -275,16 +276,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## # A tibble: 100 × 2
 ##    subject    F0
 ##    &lt;chr&gt;   &lt;dbl&gt;
-##  1 s1       136.
-##  2 s1       125.
-##  3 s1       119.
-##  4 s1       113.
-##  5 s1       111.
-##  6 s1       110.
-##  7 s1       116.
-##  8 s1       104.
-##  9 s1       116.
-## 10 s1       118.
+##  1 s1      139. 
+##  2 s1      131. 
+##  3 s1       99.5
+##  4 s1      116. 
+##  5 s1      109. 
+##  6 s1      106. 
+##  7 s1      127. 
+##  8 s1      128. 
+##  9 s1      125. 
+## 10 s1      100. 
 ## # ℹ 90 more rows</code></pre>
 <div class="sourceCode" id="cb450"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb450-1"><a href="joining-with-dplyr.html#cb450-1" tabindex="-1"></a>meta <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">subject =</span> <span class="fu">paste0</span>(<span class="st">&quot;s&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>),</span>
 <span id="cb450-2"><a href="joining-with-dplyr.html#cb450-2" tabindex="-1"></a>               <span class="at">age =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;old&quot;</span>, <span class="st">&quot;young&quot;</span>), <span class="at">each =</span> <span class="dv">5</span>))</span>
@@ -307,16 +308,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## # A tibble: 100 × 3
 ##    subject    F0 age  
 ##    &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;
-##  1 s1       136. old  
-##  2 s1       125. old  
-##  3 s1       119. old  
-##  4 s1       113. old  
-##  5 s1       111. old  
-##  6 s1       110. old  
-##  7 s1       116. old  
-##  8 s1       104. old  
-##  9 s1       116. old  
-## 10 s1       118. old  
+##  1 s1      139.  old  
+##  2 s1      131.  old  
+##  3 s1       99.5 old  
+##  4 s1      116.  old  
+##  5 s1      109.  old  
+##  6 s1      106.  old  
+##  7 s1      127.  old  
+##  8 s1      128.  old  
+##  9 s1      125.  old  
+## 10 s1      100.  old  
 ## # ℹ 90 more rows</code></pre>
 <p>It can happen that the column that provides the identifier has different names in <code>x</code> and <code>y</code>. In this case we can tell the join via <code>by = c("a"="b")</code> that the column <code>a</code> from data frame <code>x</code> shall be matched with the column <code>b</code> from data frame <code>y</code>. This works for all joining functions presented in this chapter.</p>
 <div class="sourceCode" id="cb454"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb454-1"><a href="joining-with-dplyr.html#cb454-1" tabindex="-1"></a>measures <span class="sc">%&lt;&gt;%</span> <span class="fu">rename</span>(<span class="at">Vpn =</span> subject)</span>
@@ -324,16 +325,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## # A tibble: 100 × 3
 ##    Vpn      F0 age  
 ##    &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;
-##  1 s1     136. old  
-##  2 s1     125. old  
-##  3 s1     119. old  
-##  4 s1     113. old  
-##  5 s1     111. old  
-##  6 s1     110. old  
-##  7 s1     116. old  
-##  8 s1     104. old  
-##  9 s1     116. old  
-## 10 s1     118. old  
+##  1 s1    139.  old  
+##  2 s1    131.  old  
+##  3 s1     99.5 old  
+##  4 s1    116.  old  
+##  5 s1    109.  old  
+##  6 s1    106.  old  
+##  7 s1    127.  old  
+##  8 s1    128.  old  
+##  9 s1    125.  old  
+## 10 s1    100.  old  
 ## # ℹ 90 more rows</code></pre>
 <div class="sourceCode" id="cb456"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb456-1"><a href="joining-with-dplyr.html#cb456-1" tabindex="-1"></a>measures <span class="sc">%&lt;&gt;%</span> <span class="fu">rename</span>(<span class="at">subject =</span> Vpn)</span></code></pre></div>
 <p>This example has so far always returned all observations from <code>measures</code> and all columns of both data frames. This is because <code>measures</code> and <code>meta</code> both contain information on the same ten speakers. If we have less information in one of the two data frames, the result is suddenly missing rows:</p>
@@ -344,16 +345,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## # A tibble: 100 × 3
 ##    subject    F0 age  
 ##    &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;
-##  1 s1       125. old  
-##  2 s1       106. old  
-##  3 s1       120. old  
-##  4 s1       106. old  
-##  5 s1       142. old  
-##  6 s1       113. old  
-##  7 s1       122. old  
-##  8 s1       119. old  
-##  9 s1       112. old  
-## 10 s1       124. old  
+##  1 s1      135.  old  
+##  2 s1       84.2 old  
+##  3 s1      130.  old  
+##  4 s1      104.  old  
+##  5 s1       97.4 old  
+##  6 s1      135.  old  
+##  7 s1       85.0 old  
+##  8 s1       93.8 old  
+##  9 s1      123.  old  
+## 10 s1      124.  old  
 ## # ℹ 90 more rows</code></pre>
 <p>The result of this inner join has no rows for speakers 11 to 20 because there is no information on these speakers in the data frame <code>meta</code>!</p>
 </div>
@@ -365,48 +366,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## # A tibble: 11 × 3
 ##    subject    F0 age  
 ##    &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;
-##  1 s10      148. young
-##  2 s10      123. young
-##  3 s10      125. young
-##  4 s10      124. young
-##  5 s10      105. young
-##  6 s10      101. young
-##  7 s11      135. &lt;NA&gt; 
-##  8 s11      132. &lt;NA&gt; 
-##  9 s11      108. &lt;NA&gt; 
-## 10 s11      124. &lt;NA&gt; 
-## 11 s11      123. &lt;NA&gt;</code></pre>
+##  1 s10     115.  young
+##  2 s10     132.  young
+##  3 s10     103.  young
+##  4 s10     132.  young
+##  5 s10     108.  young
+##  6 s10      97.5 young
+##  7 s11     130.  &lt;NA&gt; 
+##  8 s11     141.  &lt;NA&gt; 
+##  9 s11     121.  &lt;NA&gt; 
+## 10 s11     147.  &lt;NA&gt; 
+## 11 s11     123.  &lt;NA&gt;</code></pre>
 <p>This result consists of 200 rows (if we do not use <code>slice()</code>) – when we used the inner join above with the exact same two tibbles, the result only consisted of 100 rows. This is because <code>full_join()</code> kept the 100 rows of values for speakers 11 to 20 while <code>inner_join()</code> removed them because there was no matching metadata for these speakers in <code>meta</code>. Thus, the result of the full join contains NA values in the appended column <code>age</code> for speakers 11 to 20.</p>
 <p>If you don’t want to keep all rows from both data frames, the functions <code>left_join()</code> and <code>right_join()</code> are at your disposal. The <code>left_join()</code> keeps all rows from data frame <code>x</code> while the <code>right_join()</code> keeps all rows from data frame <code>y</code>. In our example we want to keep all rows from <code>measures</code> and just add the information on the speakers’ age from <code>meta</code>:</p>
 <div class="sourceCode" id="cb461"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb461-1"><a href="joining-with-dplyr.html#cb461-1" tabindex="-1"></a><span class="fu">left_join</span>(<span class="at">x =</span> measures, <span class="at">y =</span> meta, <span class="at">by =</span> <span class="st">&quot;subject&quot;</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 200 × 3
 ##    subject    F0 age  
 ##    &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;
-##  1 s1       125. old  
-##  2 s1       106. old  
-##  3 s1       120. old  
-##  4 s1       106. old  
-##  5 s1       142. old  
-##  6 s1       113. old  
-##  7 s1       122. old  
-##  8 s1       119. old  
-##  9 s1       112. old  
-## 10 s1       124. old  
+##  1 s1      135.  old  
+##  2 s1       84.2 old  
+##  3 s1      130.  old  
+##  4 s1      104.  old  
+##  5 s1       97.4 old  
+##  6 s1      135.  old  
+##  7 s1       85.0 old  
+##  8 s1       93.8 old  
+##  9 s1      123.  old  
+## 10 s1      124.  old  
 ## # ℹ 190 more rows</code></pre>
 <div class="sourceCode" id="cb463"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb463-1"><a href="joining-with-dplyr.html#cb463-1" tabindex="-1"></a><span class="fu">right_join</span>(<span class="at">x =</span> meta, <span class="at">y =</span> measures, <span class="at">by =</span> <span class="st">&quot;subject&quot;</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 200 × 3
 ##    subject age      F0
 ##    &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;
-##  1 s1      old    125.
-##  2 s1      old    106.
-##  3 s1      old    120.
-##  4 s1      old    106.
-##  5 s1      old    142.
-##  6 s1      old    113.
-##  7 s1      old    122.
-##  8 s1      old    119.
-##  9 s1      old    112.
-## 10 s1      old    124.
+##  1 s1      old   135. 
+##  2 s1      old    84.2
+##  3 s1      old   130. 
+##  4 s1      old   104. 
+##  5 s1      old    97.4
+##  6 s1      old   135. 
+##  7 s1      old    85.0
+##  8 s1      old    93.8
+##  9 s1      old   123. 
+## 10 s1      old   124. 
 ## # ℹ 190 more rows</code></pre>
 </div>
 </div>
@@ -439,8 +440,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb467-3"><a href="joining-with-dplyr.html#cb467-3" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_rt =</span> <span class="fu">mean</span>(RT)) <span class="sc">%&gt;%</span> </span>
 <span id="cb467-4"><a href="joining-with-dplyr.html#cb467-4" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb467-5"><a href="joining-with-dplyr.html#cb467-5" tabindex="-1"></a>  <span class="fu">slice_max</span>(mean_rt, <span class="at">n =</span> <span class="dv">5</span>)</span></code></pre></div>
-<pre><code>## `summarise()` has grouped output by &#39;Subject&#39;. You can
-## override using the `.groups` argument.</code></pre>
+<pre><code>## `summarise()` has regrouped the output.
+## ℹ Summaries were computed grouped by Subject and
+##   Vowel.
+## ℹ Output is grouped by Subject.
+## ℹ Use `summarise(.groups = &quot;drop_last&quot;)` to silence
+##   this message.
+## ℹ Use `summarise(.by = c(Subject, Vowel))` for
+##   per-operation grouping (`?dplyr::dplyr_by`) instead.</code></pre>
 <div class="sourceCode" id="cb469"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb469-1"><a href="joining-with-dplyr.html#cb469-1" tabindex="-1"></a>vcv_summary</span></code></pre></div>
 <pre><code>## # A tibble: 5 × 3
 ##   Subject Vowel mean_rt
@@ -499,16 +506,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## # A tibble: 100 × 2
 ##    subject    F0
 ##    &lt;chr&gt;   &lt;dbl&gt;
-##  1 s11     135. 
-##  2 s11     132. 
-##  3 s11     108. 
-##  4 s11     124. 
-##  5 s11     123. 
-##  6 s11     129. 
-##  7 s11     126. 
-##  8 s11     119. 
-##  9 s11      95.8
-## 10 s11     122. 
+##  1 s11      130.
+##  2 s11      141.
+##  3 s11      121.
+##  4 s11      147.
+##  5 s11      123.
+##  6 s11      112.
+##  7 s11      104.
+##  8 s11      140.
+##  9 s11      132.
+## 10 s11      122.
 ## # ℹ 90 more rows</code></pre>
 <p>The result is the opposite of the inner join: Here we receive the 100 observations from speakers 11 to 20 for whom there is no metadata.</p>
 <div class="gray">

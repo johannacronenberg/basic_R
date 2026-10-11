@@ -7,7 +7,7 @@ types-of-documents
 r-scripts
 r-markdown
 help
-recognising-errors
+recognizing-errors
 ask-the-community
 help-with-ggplot2
 statistics-in-r-literature

@@ -48,11 +48,11 @@ lapply(names(githubs), function(pkg) {
 
 ## Installation
 
-- Download and install the [Software R](https://ftp.fau.de/cran/). The latest version is currently `4.5.x` (July 2025).
+- Download and install the [Software R](https://ftp.fau.de/cran/). The latest version is currently `4.6.x` (as of October 2026).
 
 - Also download and install [RStudio](https://RStudio.com/products/RStudio/download/#download).
 
-- Watch this [short introduction to RStudio](https://www.youtube.com/watch?v=tyvEHQszZJs).
+- Watch this [short introduction to RStudio](https://www.youtube.com/watch?v=tyvEHQszZJs) (in German).
 
 - Create a directory on your hard drive to be used for this course.
 
@@ -150,7 +150,7 @@ Special symbols are used in the markdown document that are converted as follows 
 
 \*\*bold\*\*: A double asterisk before and after the text marks it as bold.
 
-\*italics\*: A single asterisk italicises text.
+\*italics\*: A single asterisk italicizes text.
 
 \`code\`: The backslash quotes highlight the text: this is often used when marking code or variables outside of a code snippet (but note that any such code cannot be executed).
 
@@ -160,7 +160,7 @@ More information is available in the [cheatsheet for R Markdown](https://www.RSt
 
 ## Help
 
-### Recognising Errors
+### Recognizing Errors
 
 - Warnings: if you make a syntax error (e.g. by forgetting a bracket), you will see a red warning sign at the beginning of the line of code that contains the error. Don't ignore this because it shows that a mistake has been made. The warning sign disappears once the error is corrected.
 
@@ -200,16 +200,16 @@ help("getwd")
 
 - [Cookbook for R](http://www.cookbook-r.com/Graphs/)
 
-- [Cheatsheet ggplot2](https://RStudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
+- [Cheatsheet ggplot2](https://rstudio.github.io/cheatsheets/data-visualization.pdf)
 
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/ggplot2?sort=faq)
 
 ### Statistics in R: Literature
 
-If you need more information about using statistics in R, the following are recommended:
+If you need more information about using statistics in R, I recommend the following books (all available via the university library):
 
-- Bodo Winter's "Statistics for Linguists: An Introduction using R": A recent book with excellent explanations to all major themes in inferential statistics. It's available online via the LMU library.
+- Bodo Winter's "Statistics for Linguists: An Introduction using R": A recent book with excellent explanations to all major themes in inferential statistics.
 
-- Stefan Gries' "Statistics for Linguistics with R: A Practical Introduction": Useful for decision making about which model to use for which type of question. Although the code is not always up-to-date (given that the book was published in 2009) the statistical content is still valid. Also online via the LMU library.
+- Stefan Gries' "Statistics for Linguistics with R: A Practical Introduction": Useful for decision making about which model to use for which type of question. Although the code is not always up-to-date (given that the book was published in 2009) the statistical content is still valid.
 
-- Harald Baayen's "Analyzing Linguistic Data: A Practical Introduction to Statistics": This is for more advanced readers. Although the R code is a bit out of date, the explanations and examples of statistics foundations are very helpful. Available as a hard copy from the LMU library.
+- Harald Baayen's "Analyzing Linguistic Data: A Practical Introduction to Statistics": This is for more advanced readers. Although the R code is a bit out of date, the explanations and examples of statistics foundations are very helpful.

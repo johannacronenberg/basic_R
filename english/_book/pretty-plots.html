@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>10 Pretty Plots | Programming in R: An Introduction for Phoneticians</title>
   <meta name="description" content="An introduction to data processing in R focussing on tidyverse. This introduction was written as study material for the students of the Institute of Phonetics and Speech Processing at the University of Munich." />
-  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
   <meta property="og:title" content="10 Pretty Plots | Programming in R: An Introduction for Phoneticians" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Johanna Cronenberg" />
 
 
-<meta name="date" content="2025-07-28" />
+<meta name="date" content="2026-10-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,8 +55,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -66,7 +67,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -153,7 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="1.6" data-path="setup.html"><a href="setup.html#help"><i class="fa fa-check"></i><b>1.6</b> Help</a>
 <ul>
-<li class="chapter" data-level="1.6.1" data-path="setup.html"><a href="setup.html#recognising-errors"><i class="fa fa-check"></i><b>1.6.1</b> Recognising Errors</a></li>
+<li class="chapter" data-level="1.6.1" data-path="setup.html"><a href="setup.html#recognizing-errors"><i class="fa fa-check"></i><b>1.6.1</b> Recognizing Errors</a></li>
 <li class="chapter" data-level="1.6.2" data-path="setup.html"><a href="setup.html#ask-the-community"><i class="fa fa-check"></i><b>1.6.2</b> Ask the Community</a></li>
 <li class="chapter" data-level="1.6.3" data-path="setup.html"><a href="setup.html#help-with-ggplot2"><i class="fa fa-check"></i><b>1.6.3</b> Help with <code>ggplot2</code></a></li>
 <li class="chapter" data-level="1.6.4" data-path="setup.html"><a href="setup.html#statistics-in-r-literature"><i class="fa fa-check"></i><b>1.6.4</b> Statistics in R: Literature</a></li>
@@ -275,7 +276,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb480-4"><a href="pretty-plots.html#cb480-4" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Place of Articulation&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb480-5"><a href="pretty-plots.html#cb480-5" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Duration (ms)&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb480-6"><a href="pretty-plots.html#cb480-6" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Boxplot Data&quot;</span>)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-162-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-162-1.svg" alt="" width="672" /></p>
 <p>Otherwise you can also use <code>labs()</code> for all labels together:</p>
 <div class="sourceCode" id="cb481"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb481-1"><a href="pretty-plots.html#cb481-1" tabindex="-1"></a><span class="fu">ggplot</span>(coronal) <span class="sc">+</span> </span>
 <span id="cb481-2"><a href="pretty-plots.html#cb481-2" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Region, <span class="at">fill =</span> Fr) <span class="sc">+</span> </span>
@@ -284,7 +285,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb481-5"><a href="pretty-plots.html#cb481-5" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Proportion&quot;</span>, </span>
 <span id="cb481-6"><a href="pretty-plots.html#cb481-6" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">&quot;Proportional Use of Fricatives&quot;</span>,</span>
 <span id="cb481-7"><a href="pretty-plots.html#cb481-7" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;Separated by Region&quot;</span>)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-163-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-163-1.svg" alt="" width="672" /></p>
 </div>
 <div id="limit-the-coordinate-system" class="section level2 hasAnchor" number="10.2">
 <h2><span class="header-section-number">10.2</span> Limit the Coordinate System<a href="pretty-plots.html#limit-the-coordinate-system" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -297,14 +298,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb482-2"><a href="pretty-plots.html#cb482-2" tabindex="-1"></a><span class="fu">ggplot</span>(int) <span class="sc">+</span> </span>
 <span id="cb482-3"><a href="pretty-plots.html#cb482-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> dB, <span class="at">y =</span> Dauer) <span class="sc">+</span> </span>
 <span id="cb482-4"><a href="pretty-plots.html#cb482-4" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-164-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-164-1.svg" alt="" width="672" /></p>
 <div class="sourceCode" id="cb483"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb483-1"><a href="pretty-plots.html#cb483-1" tabindex="-1"></a><span class="co"># with coord_cartesian()</span></span>
 <span id="cb483-2"><a href="pretty-plots.html#cb483-2" tabindex="-1"></a><span class="fu">ggplot</span>(int) <span class="sc">+</span> </span>
 <span id="cb483-3"><a href="pretty-plots.html#cb483-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> dB, <span class="at">y =</span> Dauer) <span class="sc">+</span> </span>
 <span id="cb483-4"><a href="pretty-plots.html#cb483-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
 <span id="cb483-5"><a href="pretty-plots.html#cb483-5" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">10</span>,<span class="dv">40</span>), </span>
 <span id="cb483-6"><a href="pretty-plots.html#cb483-6" tabindex="-1"></a>                  <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">30</span>,<span class="dv">280</span>))</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-164-2.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-164-2.svg" alt="" width="672" /></p>
 <div class="sourceCode" id="cb484"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb484-1"><a href="pretty-plots.html#cb484-1" tabindex="-1"></a><span class="co"># with xlim() and ylim()</span></span>
 <span id="cb484-2"><a href="pretty-plots.html#cb484-2" tabindex="-1"></a><span class="fu">ggplot</span>(int) <span class="sc">+</span> </span>
 <span id="cb484-3"><a href="pretty-plots.html#cb484-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> dB, <span class="at">y =</span> Dauer) <span class="sc">+</span> </span>
@@ -313,7 +314,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb484-6"><a href="pretty-plots.html#cb484-6" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">30</span>, <span class="dv">280</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 2 rows containing missing values or values
 ## outside the scale range (`geom_point()`).</code></pre>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-164-3.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-164-3.svg" alt="" width="672" /></p>
 </div>
 <div id="colours" class="section level2 hasAnchor" number="10.3">
 <h2><span class="header-section-number">10.3</span> Colours<a href="pretty-plots.html#colours" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -330,19 +331,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb489-2"><a href="pretty-plots.html#cb489-2" tabindex="-1"></a><span class="fu">ggplot</span>(asp) <span class="sc">+</span> </span>
 <span id="cb489-3"><a href="pretty-plots.html#cb489-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Kons, <span class="at">y =</span> d, <span class="at">fill =</span> Kons) <span class="sc">+</span> </span>
 <span id="cb489-4"><a href="pretty-plots.html#cb489-4" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-167-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-167-1.svg" alt="" width="672" /></p>
 <div class="sourceCode" id="cb490"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb490-1"><a href="pretty-plots.html#cb490-1" tabindex="-1"></a><span class="co"># with &quot;col&quot; (dispreferred!)</span></span>
 <span id="cb490-2"><a href="pretty-plots.html#cb490-2" tabindex="-1"></a><span class="fu">ggplot</span>(asp) <span class="sc">+</span> </span>
 <span id="cb490-3"><a href="pretty-plots.html#cb490-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Kons, <span class="at">y =</span> d, <span class="at">col =</span> Kons) <span class="sc">+</span> </span>
 <span id="cb490-4"><a href="pretty-plots.html#cb490-4" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-167-2.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-167-2.svg" alt="" width="672" /></p>
 <p>As you can see, a legend for the colours was automatically added to the plot. Now, let’s choose the colours ourselves:</p>
 <div class="sourceCode" id="cb491"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb491-1"><a href="pretty-plots.html#cb491-1" tabindex="-1"></a><span class="co"># &quot;fill&quot; with our own colours</span></span>
 <span id="cb491-2"><a href="pretty-plots.html#cb491-2" tabindex="-1"></a>colours <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;darkgoldenrod1&quot;</span>, <span class="st">&quot;navy&quot;</span>)</span>
 <span id="cb491-3"><a href="pretty-plots.html#cb491-3" tabindex="-1"></a><span class="fu">ggplot</span>(asp) <span class="sc">+</span> </span>
 <span id="cb491-4"><a href="pretty-plots.html#cb491-4" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">y =</span> d, <span class="at">x =</span> Kons, <span class="at">fill =</span> Kons) <span class="sc">+</span> </span>
 <span id="cb491-5"><a href="pretty-plots.html#cb491-5" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill =</span> colours)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-168-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-168-1.svg" alt="" width="672" /></p>
 <p>This plot does not have a legend. If we want to have one, we need to use the functions <code>scale_color_manual()</code> or <code>scale_fill_manual()</code>, respectively:</p>
 <div class="sourceCode" id="cb492"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb492-1"><a href="pretty-plots.html#cb492-1" tabindex="-1"></a><span class="co"># &quot;fill&quot; with our own colours</span></span>
 <span id="cb492-2"><a href="pretty-plots.html#cb492-2" tabindex="-1"></a>colours <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;darkgoldenrod1&quot;</span>, <span class="st">&quot;navy&quot;</span>)</span>
@@ -350,13 +351,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb492-4"><a href="pretty-plots.html#cb492-4" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">y =</span> d, <span class="at">x =</span> Kons, <span class="at">fill =</span> Kons) <span class="sc">+</span> </span>
 <span id="cb492-5"><a href="pretty-plots.html#cb492-5" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> </span>
 <span id="cb492-6"><a href="pretty-plots.html#cb492-6" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> colours)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-169-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-169-1.svg" alt="" width="672" /></p>
 <div class="sourceCode" id="cb493"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb493-1"><a href="pretty-plots.html#cb493-1" tabindex="-1"></a><span class="co"># the same for the bar plot</span></span>
 <span id="cb493-2"><a href="pretty-plots.html#cb493-2" tabindex="-1"></a><span class="fu">ggplot</span>(coronal) <span class="sc">+</span> </span>
 <span id="cb493-3"><a href="pretty-plots.html#cb493-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Region, <span class="at">fill =</span> Fr) <span class="sc">+</span> </span>
 <span id="cb493-4"><a href="pretty-plots.html#cb493-4" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
 <span id="cb493-5"><a href="pretty-plots.html#cb493-5" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> colours)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-169-2.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-169-2.svg" alt="" width="672" /></p>
 <p>By the way, boxplots offer the possibility of styling the outliers independently of the box:</p>
 <div class="sourceCode" id="cb494"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb494-1"><a href="pretty-plots.html#cb494-1" tabindex="-1"></a>colours <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;darkgoldenrod1&quot;</span>, <span class="st">&quot;navy&quot;</span>)</span>
 <span id="cb494-2"><a href="pretty-plots.html#cb494-2" tabindex="-1"></a><span class="fu">ggplot</span>(asp) <span class="sc">+</span> </span>
@@ -365,7 +366,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb494-5"><a href="pretty-plots.html#cb494-5" tabindex="-1"></a>               <span class="at">outlier.shape =</span> <span class="dv">4</span>, </span>
 <span id="cb494-6"><a href="pretty-plots.html#cb494-6" tabindex="-1"></a>               <span class="at">outlier.size =</span> <span class="dv">3</span>) <span class="sc">+</span> </span>
 <span id="cb494-7"><a href="pretty-plots.html#cb494-7" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> colours)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-170-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-170-1.svg" alt="" width="672" /></p>
 </div>
 <div id="further-specifications" class="section level2 hasAnchor" number="10.4">
 <h2><span class="header-section-number">10.4</span> Further Specifications<a href="pretty-plots.html#further-specifications" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -393,10 +394,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## Warning: Using `size` aesthetic for lines was deprecated in
 ## ggplot2 3.4.0.
 ## ℹ Please use `linewidth` instead.
-## This warning is displayed once every 8 hours.
+## This warning is displayed once per session.
 ## Call `lifecycle::last_lifecycle_warnings()` to see
 ## where this warning was generated.</code></pre>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-172-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-172-1.svg" alt="" width="672" /></p>
 <p>Always consider carefully whether a specification is actually necessary in order to make the plot clearer.</p>
 </div>
 <div id="font-size" class="section level2 hasAnchor" number="10.5">
@@ -410,7 +411,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb498-6"><a href="pretty-plots.html#cb498-6" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Boxplot Data&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb498-7"><a href="pretty-plots.html#cb498-7" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">24</span>),            <span class="co"># Axes and title</span></span>
 <span id="cb498-8"><a href="pretty-plots.html#cb498-8" tabindex="-1"></a>        <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>))       <span class="co"># Axis labels</span></span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-173-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-173-1.svg" alt="" width="672" /></p>
 <div class="gray">
 <p><strong>Further Information: <code>theme()</code></strong></p>
 <p>The <code>theme()</code> is responsible for the background colour of the plots, the appearance of the axes and many other things. An overview of the <a href="https://ggplot2.tidyverse.org/reference/theme.html">arguments to <code>theme()</code></a> might give you an impression of all the things you can adapt in your plots.</p>
@@ -436,32 +437,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb499-3"><a href="pretty-plots.html#cb499-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> F1, <span class="at">y =</span> F2) <span class="sc">+</span> </span>
 <span id="cb499-4"><a href="pretty-plots.html#cb499-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
 <span id="cb499-5"><a href="pretty-plots.html#cb499-5" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Subj)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-174-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-174-1.svg" alt="" width="672" /></p>
 <div class="sourceCode" id="cb500"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb500-1"><a href="pretty-plots.html#cb500-1" tabindex="-1"></a><span class="co"># divide by subject and tenseness</span></span>
 <span id="cb500-2"><a href="pretty-plots.html#cb500-2" tabindex="-1"></a><span class="fu">ggplot</span>(vdata) <span class="sc">+</span> </span>
 <span id="cb500-3"><a href="pretty-plots.html#cb500-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> F1, <span class="at">y =</span> F2) <span class="sc">+</span> </span>
 <span id="cb500-4"><a href="pretty-plots.html#cb500-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
 <span id="cb500-5"><a href="pretty-plots.html#cb500-5" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(Subj<span class="sc">~</span>Tense)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-174-2.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-174-2.svg" alt="" width="672" /></p>
 <p><code>facet_grid()</code>, on the other hand, sorts the panels into either rows <em>or</em> columns. The order for the formula is <code>facet_grid(rows~columns)</code>.</p>
 <div class="sourceCode" id="cb501"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb501-1"><a href="pretty-plots.html#cb501-1" tabindex="-1"></a><span class="co"># divide by subject in rows</span></span>
 <span id="cb501-2"><a href="pretty-plots.html#cb501-2" tabindex="-1"></a><span class="fu">ggplot</span>(vdata) <span class="sc">+</span> </span>
 <span id="cb501-3"><a href="pretty-plots.html#cb501-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> F1, <span class="at">y =</span> F2) <span class="sc">+</span> </span>
 <span id="cb501-4"><a href="pretty-plots.html#cb501-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
 <span id="cb501-5"><a href="pretty-plots.html#cb501-5" tabindex="-1"></a>  <span class="fu">facet_grid</span>(Subj<span class="sc">~</span>.)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-175-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-175-1.svg" alt="" width="672" /></p>
 <div class="sourceCode" id="cb502"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb502-1"><a href="pretty-plots.html#cb502-1" tabindex="-1"></a><span class="co"># divide by subject in columns</span></span>
 <span id="cb502-2"><a href="pretty-plots.html#cb502-2" tabindex="-1"></a><span class="fu">ggplot</span>(vdata) <span class="sc">+</span> </span>
 <span id="cb502-3"><a href="pretty-plots.html#cb502-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> F1, <span class="at">y =</span> F2) <span class="sc">+</span> </span>
 <span id="cb502-4"><a href="pretty-plots.html#cb502-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
 <span id="cb502-5"><a href="pretty-plots.html#cb502-5" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="sc">~</span>Subj)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-175-2.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-175-2.svg" alt="" width="672" /></p>
 <div class="sourceCode" id="cb503"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb503-1"><a href="pretty-plots.html#cb503-1" tabindex="-1"></a><span class="co"># divide by subject and tenseness</span></span>
 <span id="cb503-2"><a href="pretty-plots.html#cb503-2" tabindex="-1"></a><span class="fu">ggplot</span>(vdata) <span class="sc">+</span> </span>
 <span id="cb503-3"><a href="pretty-plots.html#cb503-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> F1, <span class="at">y =</span> F2) <span class="sc">+</span> </span>
 <span id="cb503-4"><a href="pretty-plots.html#cb503-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
 <span id="cb503-5"><a href="pretty-plots.html#cb503-5" tabindex="-1"></a>  <span class="fu">facet_grid</span>(Subj<span class="sc">~</span>Tense)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-175-3.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-175-3.svg" alt="" width="672" /></p>
 </div>
 <div id="arrange-plots" class="section level3 hasAnchor" number="10.6.2">
 <h3><span class="header-section-number">10.6.2</span> Arrange Plots<a href="pretty-plots.html#arrange-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -480,10 +481,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb504-12"><a href="pretty-plots.html#cb504-12" tabindex="-1"></a></span>
 <span id="cb504-13"><a href="pretty-plots.html#cb504-13" tabindex="-1"></a><span class="co"># in three columns and one row</span></span>
 <span id="cb504-14"><a href="pretty-plots.html#cb504-14" tabindex="-1"></a><span class="fu">grid.arrange</span>(plot1, plot2, plot3, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">nrow =</span> <span class="dv">1</span>)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-176-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-176-1.svg" alt="" width="672" /></p>
 <div class="sourceCode" id="cb505"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb505-1"><a href="pretty-plots.html#cb505-1" tabindex="-1"></a><span class="co"># in one column and three rows</span></span>
 <span id="cb505-2"><a href="pretty-plots.html#cb505-2" tabindex="-1"></a><span class="fu">grid.arrange</span>(plot1, plot2, plot3, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">nrow =</span> <span class="dv">3</span>)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-176-2.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-176-2.svg" alt="" width="672" /></p>
 
 </div>
 </div>

@@ -48,7 +48,7 @@ lapply(names(githubs), function(pkg) {
 
 ## Installation und Kursverzeichnis
 
-- Laden Sie die [Statistik-Software R](https://ftp.fau.de/cran/) herunter und installieren Sie sie. Die neueste Version ist derzeit `4.5.x` (Stand: Juli 2025).
+- Laden Sie die [Statistik-Software R](https://ftp.fau.de/cran/) herunter und installieren Sie sie. Die neueste Version ist derzeit `4.6.x` (Stand: Oktober 2026).
 
 - Laden Sie außerdem [RStudio](https://rstudio.com/products/rstudio/download/#download) herunter und installieren Sie es.
 
@@ -68,7 +68,7 @@ Für diesen Kurs werden wir ein *R project* anlegen, da Ihnen dies die Arbeit mi
 
 RStudio öffnet nun automatisch das Projekt, das genauso benannt ist wie Ihr Kursverzeichnis (siehe Schaltfläche oben rechts). Sie können das Projekt über diese Schaltfläche schließen und anschließend auch wieder öffnen. Das Projekt lässt sich außerdem öffnen, indem Sie in Ihrem Kursverzeichnis auf die neu angelegte Datei mit der Endung `.Rproj` klicken.
 
-Sollten Sie Probleme beim Erstellen des Projekts haben, empfehlen wir Ihnen diese [Video-Kurzanleitung](https://www.youtube.com/watch?v=hKoSJGWnFFA).
+Sollten Sie Probleme beim Erstellen des Projekts haben, empfehlen wir Ihnen diese [Video-Kurzanleitung](https://www.youtube.com/watch?v=hKoSJGWnFFA) (in Englisch).
 
 <div class="gray">
 **Weiterführende Infos: R Projekte**
@@ -194,17 +194,17 @@ help("getwd")
 
 - [Cookbook for R](http://www.cookbook-r.com/Graphs/)
 
-- [Cheatsheet ggplot2](https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
+- [Cheatsheet ggplot2](https://rstudio.github.io/cheatsheets/data-visualization.pdf)
 
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/ggplot2?sort=faq)
 
 ### Statistik in R: Literatur
 
-Wenn Sie mehr Informationen zu benötigen, seien Ihnen folgende Werke ans Herz gelegt:
+Wenn Sie mehr Informationen zu benötigen, seien Ihnen folgende Werke ans Herz gelegt (alle digital über die Uni-Bib verfügbar!):
 
-- Bodo Winter's "Statistics for Linguists: An Introduction using R": Ein frisch erschienenes Buch voller hervorragender Erklärungen zu allen wichtigen Themen der Inferenzstatistik. Ist über die Uni-Bib digital verfügbar.
+- Bodo Winter's "Statistics for Linguists: An Introduction using R": Ein frisch erschienenes Buch voller hervorragender Erklärungen zu allen wichtigen Themen der Inferenzstatistik.
 
-- Stefan Gries' "Statistics for Linguistics with R: A Practical Introduction": Nützlich für die Entscheidungsfindung, welches statistische Modell zu den eigenen Daten und der eigenen Fragestellung passt. Da das Buch von 2009 ist, ist der Code z.T. veraltet, aber aus statistischer Sicht ist der Inhalt noch aktuell. Ist über die Uni-Bib digital verfügbar.
+- Stefan Gries' "Statistics for Linguistics with R: A Practical Introduction": Nützlich für die Entscheidungsfindung, welches statistische Modell zu den eigenen Daten und der eigenen Fragestellung passt. Da das Buch von 2009 ist, ist der Code z.T. veraltet, aber aus statistischer Sicht ist der Inhalt noch aktuell.
 
-- Harald Baayen's "Analyzing Linguistic Data: A Practical Introduction to Statistics": Einführung für eher Fortgeschrittene. Hier ist der R Code ebenfalls oft veraltet, aber die Erklärungen und Beispiele zu den Statistikgrundlagen sind hilfreich. Als physisches Exemplar in der Unibib verfügbar.
+- Harald Baayen's "Analyzing Linguistic Data: A Practical Introduction to Statistics": Einführung für eher Fortgeschrittene. Hier ist der R Code ebenfalls oft veraltet, aber die Erklärungen und Beispiele zu den Statistikgrundlagen sind hilfreich.
 

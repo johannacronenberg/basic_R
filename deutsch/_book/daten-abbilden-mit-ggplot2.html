@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7 Daten abbilden mit ggplot2 | Programmieren in R: eine Einführung für PhonetikerInnen</title>
   <meta name="description" content="Eine Einführung in die Datenverarbeitung mit R mit Fokus auf das tidyverse. Diese Einführung wurde als Lehrmaterial für die Studierenden des Instituts für Phonetik und Sprachverarbeitung der LMU konzipiert." />
-  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7 Daten abbilden mit ggplot2 | Programmieren in R: eine Einführung für PhonetikerInnen" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Johanna Cronenberg" />
 
 
-<meta name="date" content="2025-07-28" />
+<meta name="date" content="2026-10-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,8 +55,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -66,7 +67,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -168,15 +169,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.5" data-path="erste-berechnungen-in-r.html"><a href="erste-berechnungen-in-r.html#vektoren-manipulieren"><i class="fa fa-check"></i><b>2.5</b> Vektoren manipulieren</a></li>
 <li class="chapter" data-level="2.6" data-path="erste-berechnungen-in-r.html"><a href="erste-berechnungen-in-r.html#faktoren"><i class="fa fa-check"></i><b>2.6</b> Faktoren</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="06-abbildungen.html"><a href="#datens%C3%A4tze-data-frames"><i class="fa fa-check"></i><b>3</b> Datensätze (Data Frames)</a>
+<li class="chapter" data-level="3" data-path="datensätze-data-frames.html"><a href="datensätze-data-frames.html"><i class="fa fa-check"></i><b>3</b> Datensätze (Data Frames)</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="datensätze-data-frames.html"><a href="datensätze-data-frames.html"><i class="fa fa-check"></i><b>3.1</b> Import &amp; Export</a></li>
+<li class="chapter" data-level="3.1" data-path="datensätze-data-frames.html"><a href="datensätze-data-frames.html#import-export"><i class="fa fa-check"></i><b>3.1</b> Import &amp; Export</a></li>
 <li class="chapter" data-level="3.2" data-path="datensätze-data-frames.html"><a href="datensätze-data-frames.html#eigenschaften"><i class="fa fa-check"></i><b>3.2</b> Eigenschaften</a></li>
 <li class="chapter" data-level="3.3" data-path="datensätze-data-frames.html"><a href="datensätze-data-frames.html#auf-spalten-zugreifen"><i class="fa fa-check"></i><b>3.3</b> Auf Spalten zugreifen</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="06-abbildungen.html"><a href="#einf%C3%BChrung-ins-tidyverse"><i class="fa fa-check"></i><b>4</b> Einführung ins <em>tidyverse</em></a>
+<li class="chapter" data-level="4" data-path="einführung-ins-tidyverse.html"><a href="einführung-ins-tidyverse.html"><i class="fa fa-check"></i><b>4</b> Einführung ins <em>tidyverse</em></a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="einführung-ins-tidyverse.html"><a href="einführung-ins-tidyverse.html"><i class="fa fa-check"></i><b>4.1</b> Pipes</a></li>
+<li class="chapter" data-level="4.1" data-path="einführung-ins-tidyverse.html"><a href="einführung-ins-tidyverse.html#pipes"><i class="fa fa-check"></i><b>4.1</b> Pipes</a></li>
 <li class="chapter" data-level="4.2" data-path="einführung-ins-tidyverse.html"><a href="einführung-ins-tidyverse.html#daten-manipulieren-mit-dplyr"><i class="fa fa-check"></i><b>4.2</b> Daten manipulieren mit <code>dplyr</code></a>
 <ul>
 <li class="chapter" data-level="4.2.1" data-path="einführung-ins-tidyverse.html"><a href="einführung-ins-tidyverse.html#filtering"><i class="fa fa-check"></i><b>4.2.1</b> Filtering</a></li>
@@ -184,7 +185,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2.3" data-path="einführung-ins-tidyverse.html"><a href="einführung-ins-tidyverse.html#mutating"><i class="fa fa-check"></i><b>4.2.3</b> Mutating</a></li>
 <li class="chapter" data-level="4.2.4" data-path="einführung-ins-tidyverse.html"><a href="einführung-ins-tidyverse.html#renaming"><i class="fa fa-check"></i><b>4.2.4</b> Renaming</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="06-abbildungen.html"><a href="#weitere-beispiele-f%C3%BCr-komplexe-pipes"><i class="fa fa-check"></i><b>4.3</b> Weitere Beispiele für komplexe Pipes</a></li>
+<li class="chapter" data-level="4.3" data-path="einführung-ins-tidyverse.html"><a href="einführung-ins-tidyverse.html#weitere-beispiele-f%C3%BCr-komplexe-pipes"><i class="fa fa-check"></i><b>4.3</b> Weitere Beispiele für komplexe Pipes</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="deskriptive-statistik.html"><a href="deskriptive-statistik.html"><i class="fa fa-check"></i><b>5</b> Deskriptive Statistik</a>
 <ul>
@@ -205,9 +206,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.3" data-path="daten-abbilden-mit-ggplot2.html"><a href="daten-abbilden-mit-ggplot2.html#barplots"><i class="fa fa-check"></i><b>7.3</b> Barplots</a></li>
 <li class="chapter" data-level="7.4" data-path="daten-abbilden-mit-ggplot2.html"><a href="daten-abbilden-mit-ggplot2.html#histogramme-wahrscheinlichkeitsdichte"><i class="fa fa-check"></i><b>7.4</b> Histogramme &amp; Wahrscheinlichkeitsdichte</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="06-abbildungen.html"><a href="#daten-aufr%C3%A4umen-mit-tidyr"><i class="fa fa-check"></i><b>8</b> Daten aufräumen mit <code>tidyr</code></a>
+<li class="chapter" data-level="8" data-path="daten-aufräumen-mit-tidyr.html"><a href="daten-aufräumen-mit-tidyr.html"><i class="fa fa-check"></i><b>8</b> Daten aufräumen mit <code>tidyr</code></a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="daten-aufräumen-mit-tidyr.html"><a href="daten-aufräumen-mit-tidyr.html"><i class="fa fa-check"></i><b>8.1</b> Tibbles</a></li>
+<li class="chapter" data-level="8.1" data-path="daten-aufräumen-mit-tidyr.html"><a href="daten-aufräumen-mit-tidyr.html#tibbles"><i class="fa fa-check"></i><b>8.1</b> Tibbles</a></li>
 <li class="chapter" data-level="8.2" data-path="daten-aufräumen-mit-tidyr.html"><a href="daten-aufräumen-mit-tidyr.html#pivoting"><i class="fa fa-check"></i><b>8.2</b> Pivoting</a></li>
 <li class="chapter" data-level="8.3" data-path="daten-aufräumen-mit-tidyr.html"><a href="daten-aufräumen-mit-tidyr.html#separating"><i class="fa fa-check"></i><b>8.3</b> Separating</a></li>
 </ul></li>
@@ -226,7 +227,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.2" data-path="plotting.html"><a href="plotting.html#koordinatensystem-begrenzen"><i class="fa fa-check"></i><b>10.2</b> Koordinatensystem begrenzen</a></li>
 <li class="chapter" data-level="10.3" data-path="plotting.html"><a href="plotting.html#farben"><i class="fa fa-check"></i><b>10.3</b> Farben</a></li>
 <li class="chapter" data-level="10.4" data-path="plotting.html"><a href="plotting.html#weitere-spezifikationen"><i class="fa fa-check"></i><b>10.4</b> Weitere Spezifikationen</a></li>
-<li class="chapter" data-level="10.5" data-path="06-abbildungen.html"><a href="#schriftzeichengr%C3%B6%C3%9Fe"><i class="fa fa-check"></i><b>10.5</b> Schriftzeichengröße</a></li>
+<li class="chapter" data-level="10.5" data-path="plotting.html"><a href="plotting.html#schriftzeichengr%C3%B6%C3%9Fe"><i class="fa fa-check"></i><b>10.5</b> Schriftzeichengröße</a></li>
 <li class="chapter" data-level="10.6" data-path="plotting.html"><a href="plotting.html#plots-unterteilen-und-anordnen"><i class="fa fa-check"></i><b>10.6</b> Plots unterteilen und anordnen</a>
 <ul>
 <li class="chapter" data-level="10.6.1" data-path="plotting.html"><a href="plotting.html#plots-unterteilen"><i class="fa fa-check"></i><b>10.6.1</b> Plots unterteilen</a></li>
@@ -271,26 +272,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb361"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb361-1"><a href="daten-abbilden-mit-ggplot2.html#cb361-1" tabindex="-1"></a><span class="fu">ggplot</span>(vdata) <span class="sc">+</span> </span>
 <span id="cb361-2"><a href="daten-abbilden-mit-ggplot2.html#cb361-2" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">y =</span> F1) <span class="sc">+</span> </span>
 <span id="cb361-3"><a href="daten-abbilden-mit-ggplot2.html#cb361-3" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-103-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-103-1.svg" alt="" width="672" /></p>
 <p>Boxplots eignen sich sehr gut zum Vergleichen von Werten für verschiedene kategoriale Gruppen. Dann werden diese Gruppen (üblicherweise) auf der x-Achse aufgetragen und auf der y-Achse wieder die gewünschten Werte. Hier sehen Sie ein Beispiel für die Dauer verschiedener Konsonanten aus dem Data Frame <code>asp</code>:</p>
 <div class="sourceCode" id="cb362"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb362-1"><a href="daten-abbilden-mit-ggplot2.html#cb362-1" tabindex="-1"></a><span class="fu">ggplot</span>(asp) <span class="sc">+</span></span>
 <span id="cb362-2"><a href="daten-abbilden-mit-ggplot2.html#cb362-2" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Kons, <span class="at">y =</span> d) <span class="sc">+</span></span>
 <span id="cb362-3"><a href="daten-abbilden-mit-ggplot2.html#cb362-3" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-104-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-104-1.svg" alt="" width="672" /></p>
 <p>Boxplots können auch horizontal erstellt werden (wobei das meist weniger übersichtlich ist). Dann werden die Kategorien auf der y-Achse und die Werte auf der x-Achse aufgetragen:</p>
 <div class="sourceCode" id="cb363"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb363-1"><a href="daten-abbilden-mit-ggplot2.html#cb363-1" tabindex="-1"></a><span class="fu">ggplot</span>(asp) <span class="sc">+</span></span>
 <span id="cb363-2"><a href="daten-abbilden-mit-ggplot2.html#cb363-2" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> d, <span class="at">y =</span> Kons) <span class="sc">+</span></span>
 <span id="cb363-3"><a href="daten-abbilden-mit-ggplot2.html#cb363-3" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-105-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-105-1.svg" alt="" width="672" /></p>
 <p>Manchmal ist ein sogenannter <em>Notch</em> gewünscht; dafür nutzen wir das Argument <code>notch = TRUE</code> in der Funktion <code>geom_boxplot()</code> (und ggf. <code>notchwidth</code>, um die Tiefe des Notches anzupassen):</p>
 <div class="sourceCode" id="cb364"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb364-1"><a href="daten-abbilden-mit-ggplot2.html#cb364-1" tabindex="-1"></a><span class="fu">ggplot</span>(asp) <span class="sc">+</span></span>
 <span id="cb364-2"><a href="daten-abbilden-mit-ggplot2.html#cb364-2" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Kons, <span class="at">y =</span> d) <span class="sc">+</span></span>
 <span id="cb364-3"><a href="daten-abbilden-mit-ggplot2.html#cb364-3" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">notch =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-106-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-106-1.svg" alt="" width="672" /></p>
 <div class="sourceCode" id="cb365"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb365-1"><a href="daten-abbilden-mit-ggplot2.html#cb365-1" tabindex="-1"></a><span class="fu">ggplot</span>(asp) <span class="sc">+</span></span>
 <span id="cb365-2"><a href="daten-abbilden-mit-ggplot2.html#cb365-2" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Kons, <span class="at">y =</span> d) <span class="sc">+</span></span>
 <span id="cb365-3"><a href="daten-abbilden-mit-ggplot2.html#cb365-3" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">notch =</span> <span class="cn">TRUE</span>, <span class="at">notchwidth =</span> <span class="fl">0.3</span>)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-106-2.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-106-2.svg" alt="" width="672" /></p>
 <div class="gray">
 <p><strong>Weiterführende Infos: Aesthetic mappings &amp; Piping Data Frames</strong></p>
 <p>Streng genommen sind die <em>aesthetic mappings</em> immer ein Argument der Funktion, die über die Art des Plots bestimmt (also z.B. <code>geom_boxplot()</code>). Später werden Sie feststellen, dass manche Plots bestimmte <em>aesthetic mappings</em> benötigen bzw. zulassen, die andere Plots nicht verarbeiten können. Wir lagern die <em>aesthetic mappings</em> in den allermeisten Fällen aus der Plot-Funktion aus, weil das übersichtlicher ist. Es steht Ihnen aber frei, die <em>aesthetic mappings</em> in die Funktion als Argument reinzuschreiben:</p>
@@ -298,20 +299,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb366-2"><a href="daten-abbilden-mit-ggplot2.html#cb366-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Kons, <span class="at">y =</span> d), </span>
 <span id="cb366-3"><a href="daten-abbilden-mit-ggplot2.html#cb366-3" tabindex="-1"></a>               <span class="at">notch =</span> <span class="cn">TRUE</span>, </span>
 <span id="cb366-4"><a href="daten-abbilden-mit-ggplot2.html#cb366-4" tabindex="-1"></a>               <span class="at">notchwidth =</span> <span class="fl">0.3</span>)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-107-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-107-1.svg" alt="" width="672" /></p>
 <p>Innerhalb eines <code>ggplot</code> werden die einzelnen Funktion immer und ausschließlich mit einem Pluszeichen verbunden. Der Data Frame allerdings kann mit einer einfachen Pipe an <code>ggplot()</code>übergeben werden:</p>
 <div class="sourceCode" id="cb367"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb367-1"><a href="daten-abbilden-mit-ggplot2.html#cb367-1" tabindex="-1"></a>asp <span class="sc">%&gt;%</span></span>
 <span id="cb367-2"><a href="daten-abbilden-mit-ggplot2.html#cb367-2" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb367-3"><a href="daten-abbilden-mit-ggplot2.html#cb367-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Kons, <span class="at">y =</span> d) <span class="sc">+</span></span>
 <span id="cb367-4"><a href="daten-abbilden-mit-ggplot2.html#cb367-4" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-108-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-108-1.svg" alt="" width="672" /></p>
 <p>Das ist besonders hilfreich, wenn Sie vor dem Plotten erst noch weitere Funktionen auf den Data Frame anwenden wollen, bevor Sie die daraus entstehenden Daten plotten. Hier filtern wir zum Beispiel zuerst nach Betonung, bevor wir anschließend nur noch die Dauer der betonten Wörter plotten:</p>
 <div class="sourceCode" id="cb368"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb368-1"><a href="daten-abbilden-mit-ggplot2.html#cb368-1" tabindex="-1"></a>asp <span class="sc">%&gt;%</span></span>
 <span id="cb368-2"><a href="daten-abbilden-mit-ggplot2.html#cb368-2" tabindex="-1"></a>  <span class="fu">filter</span>(Bet <span class="sc">==</span> <span class="st">&quot;be&quot;</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb368-3"><a href="daten-abbilden-mit-ggplot2.html#cb368-3" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
 <span id="cb368-4"><a href="daten-abbilden-mit-ggplot2.html#cb368-4" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Kons, <span class="at">y =</span> d) <span class="sc">+</span></span>
 <span id="cb368-5"><a href="daten-abbilden-mit-ggplot2.html#cb368-5" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-109-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-109-1.svg" alt="" width="672" /></p>
 </div>
 </div>
 <div id="scatter--lineplots" class="section level2 hasAnchor" number="7.2">
@@ -321,25 +322,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb369-2"><a href="daten-abbilden-mit-ggplot2.html#cb369-2" tabindex="-1"></a><span class="fu">ggplot</span>(int) <span class="sc">+</span></span>
 <span id="cb369-3"><a href="daten-abbilden-mit-ggplot2.html#cb369-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Dauer, <span class="at">y =</span> dB) <span class="sc">+</span></span>
 <span id="cb369-4"><a href="daten-abbilden-mit-ggplot2.html#cb369-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() </span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-110-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-110-1.svg" alt="" width="672" /></p>
 <div class="sourceCode" id="cb370"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb370-1"><a href="daten-abbilden-mit-ggplot2.html#cb370-1" tabindex="-1"></a><span class="co"># Linie:</span></span>
 <span id="cb370-2"><a href="daten-abbilden-mit-ggplot2.html#cb370-2" tabindex="-1"></a><span class="fu">ggplot</span>(int) <span class="sc">+</span>  </span>
 <span id="cb370-3"><a href="daten-abbilden-mit-ggplot2.html#cb370-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Dauer, <span class="at">y =</span> dB) <span class="sc">+</span> </span>
 <span id="cb370-4"><a href="daten-abbilden-mit-ggplot2.html#cb370-4" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-110-2.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-110-2.svg" alt="" width="672" /></p>
 <div class="sourceCode" id="cb371"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb371-1"><a href="daten-abbilden-mit-ggplot2.html#cb371-1" tabindex="-1"></a><span class="co"># Beides:</span></span>
 <span id="cb371-2"><a href="daten-abbilden-mit-ggplot2.html#cb371-2" tabindex="-1"></a><span class="fu">ggplot</span>(int) <span class="sc">+</span></span>
 <span id="cb371-3"><a href="daten-abbilden-mit-ggplot2.html#cb371-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Dauer, <span class="at">y =</span> dB) <span class="sc">+</span> </span>
 <span id="cb371-4"><a href="daten-abbilden-mit-ggplot2.html#cb371-4" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
 <span id="cb371-5"><a href="daten-abbilden-mit-ggplot2.html#cb371-5" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-110-3.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-110-3.svg" alt="" width="672" /></p>
 <p>Manchmal ist es hilfreich, vertikale oder horizontale <a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">Referenzlinien</a> in einem Plot einzuzeichnen. Horizontale Linien werden mit <code>geom_hline()</code> erzeugt, vertikale gerade Linien mit <code>geom_vline()</code>. Um eine horizontale Linie zu zeichnen, muss bekannt sein, an welcher Stelle die Linie die y-Achse schneidet. Deshalb bekommt <code>geom_hline()</code> immer das Argument <code>yintercept</code>. Bei <code>geom_vline()</code> muss mit <code>xintercept</code> die Schnittstelle der vertikalen Linie mit der x-Achse eingetragen werden. Wir fügen zum obigen Scatterplot zwei gerade Linien hinzu:</p>
 <div class="sourceCode" id="cb372"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb372-1"><a href="daten-abbilden-mit-ggplot2.html#cb372-1" tabindex="-1"></a><span class="fu">ggplot</span>(int) <span class="sc">+</span></span>
 <span id="cb372-2"><a href="daten-abbilden-mit-ggplot2.html#cb372-2" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Dauer, <span class="at">y =</span> dB) <span class="sc">+</span></span>
 <span id="cb372-3"><a href="daten-abbilden-mit-ggplot2.html#cb372-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
 <span id="cb372-4"><a href="daten-abbilden-mit-ggplot2.html#cb372-4" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">150</span>) <span class="sc">+</span> </span>
 <span id="cb372-5"><a href="daten-abbilden-mit-ggplot2.html#cb372-5" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">35</span>)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-111-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-111-1.svg" alt="" width="672" /></p>
 </div>
 <div id="barplots" class="section level2 hasAnchor" number="7.3">
 <h2><span class="header-section-number">7.3</span> Barplots<a href="daten-abbilden-mit-ggplot2.html#barplots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -347,12 +348,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb373"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb373-1"><a href="daten-abbilden-mit-ggplot2.html#cb373-1" tabindex="-1"></a><span class="fu">ggplot</span>(coronal) <span class="sc">+</span></span>
 <span id="cb373-2"><a href="daten-abbilden-mit-ggplot2.html#cb373-2" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Region) <span class="sc">+</span></span>
 <span id="cb373-3"><a href="daten-abbilden-mit-ggplot2.html#cb373-3" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-112-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-112-1.svg" alt="" width="672" /></p>
 <p>Die Balken können wir auch horizontal plotten, indem wir in den <em>aesthetic mappings</em> <code>y</code> statt <code>x</code> angeben:</p>
 <div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="daten-abbilden-mit-ggplot2.html#cb374-1" tabindex="-1"></a><span class="fu">ggplot</span>(coronal) <span class="sc">+</span></span>
 <span id="cb374-2"><a href="daten-abbilden-mit-ggplot2.html#cb374-2" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">y =</span> Region) <span class="sc">+</span></span>
 <span id="cb374-3"><a href="daten-abbilden-mit-ggplot2.html#cb374-3" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-113-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-113-1.svg" alt="" width="672" /></p>
 <p>Die Werte der Balken können Sie ganz einfach nachvollziehen, indem Sie sich die Anzahl der Vorkommnisse der drei Regionen mittels der Funktion <code>table()</code> anzeigen lassen:</p>
 <div class="sourceCode" id="cb375"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb375-1"><a href="daten-abbilden-mit-ggplot2.html#cb375-1" tabindex="-1"></a><span class="fu">table</span>(coronal<span class="sc">$</span>Region)</span></code></pre></div>
 <pre><code>## 
@@ -362,13 +363,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb377"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb377-1"><a href="daten-abbilden-mit-ggplot2.html#cb377-1" tabindex="-1"></a><span class="fu">ggplot</span>(coronal) <span class="sc">+</span></span>
 <span id="cb377-2"><a href="daten-abbilden-mit-ggplot2.html#cb377-2" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Region, <span class="at">fill =</span> Fr) <span class="sc">+</span></span>
 <span id="cb377-3"><a href="daten-abbilden-mit-ggplot2.html#cb377-3" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-115-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-115-1.svg" alt="" width="672" /></p>
 <p>Lassen Sie uns mittels der zuvor gelernten Funktionen für Grouping und Summarising die Werte in diesem Plot nachvollziehen. Dafür gruppieren wir nach Region und Frikativ und lassen uns dann mit <code>n()</code> innerhalb von <code>summarise()</code> die Anzahl der Zeilen im Data Frame pro Gruppenkombination bestimmen.</p>
 <div class="sourceCode" id="cb378"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb378-1"><a href="daten-abbilden-mit-ggplot2.html#cb378-1" tabindex="-1"></a>coronal <span class="sc">%&gt;%</span> </span>
 <span id="cb378-2"><a href="daten-abbilden-mit-ggplot2.html#cb378-2" tabindex="-1"></a>  <span class="fu">group_by</span>(Region, Fr) <span class="sc">%&gt;%</span> </span>
 <span id="cb378-3"><a href="daten-abbilden-mit-ggplot2.html#cb378-3" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>())</span></code></pre></div>
-<pre><code>## `summarise()` has grouped output by &#39;Region&#39;. You can
-## override using the `.groups` argument.</code></pre>
+<pre><code>## `summarise()` has regrouped the output.
+## ℹ Summaries were computed grouped by Region and Fr.
+## ℹ Output is grouped by Region.
+## ℹ Use `summarise(.groups = &quot;drop_last&quot;)` to silence
+##   this message.
+## ℹ Use `summarise(.by = c(Region, Fr))` for
+##   per-operation grouping (`?dplyr::dplyr_by`) instead.</code></pre>
 <pre><code>## # A tibble: 6 × 3
 ## # Groups:   Region [3]
 ##   Region Fr    count
@@ -384,12 +390,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb381-2"><a href="daten-abbilden-mit-ggplot2.html#cb381-2" tabindex="-1"></a><span class="fu">ggplot</span>(coronal) <span class="sc">+</span></span>
 <span id="cb381-3"><a href="daten-abbilden-mit-ggplot2.html#cb381-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Region, <span class="at">fill =</span> Fr) <span class="sc">+</span></span>
 <span id="cb381-4"><a href="daten-abbilden-mit-ggplot2.html#cb381-4" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">&quot;fill&quot;</span>)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-117-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-117-1.svg" alt="" width="672" /></p>
 <div class="sourceCode" id="cb382"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb382-1"><a href="daten-abbilden-mit-ggplot2.html#cb382-1" tabindex="-1"></a><span class="co"># ...um die Balken nebeneinander zu stellen:</span></span>
 <span id="cb382-2"><a href="daten-abbilden-mit-ggplot2.html#cb382-2" tabindex="-1"></a><span class="fu">ggplot</span>(coronal) <span class="sc">+</span></span>
 <span id="cb382-3"><a href="daten-abbilden-mit-ggplot2.html#cb382-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Region, <span class="at">fill =</span> Fr) <span class="sc">+</span></span>
 <span id="cb382-4"><a href="daten-abbilden-mit-ggplot2.html#cb382-4" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-117-2.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-117-2.svg" alt="" width="672" /></p>
 </div>
 <div id="histogramme-wahrscheinlichkeitsdichte" class="section level2 hasAnchor" number="7.4">
 <h2><span class="header-section-number">7.4</span> Histogramme &amp; Wahrscheinlichkeitsdichte<a href="daten-abbilden-mit-ggplot2.html#histogramme-wahrscheinlichkeitsdichte" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -397,27 +403,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb383"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb383-1"><a href="daten-abbilden-mit-ggplot2.html#cb383-1" tabindex="-1"></a><span class="fu">ggplot</span>(vdata) <span class="sc">+</span> </span>
 <span id="cb383-2"><a href="daten-abbilden-mit-ggplot2.html#cb383-2" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> F1) <span class="sc">+</span> </span>
 <span id="cb383-3"><a href="daten-abbilden-mit-ggplot2.html#cb383-3" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div>
-<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value
 ## `binwidth`.</code></pre>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-118-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-118-1.svg" alt="" width="672" /></p>
 <p>Um die einzelnen Balken besser voneinander unterscheiden zu können, lassen wir die Balken weiß umranden, indem wir <code>geom_histogram()</code> das Argument <code>color = "white"</code> übergeben:</p>
 <div class="sourceCode" id="cb385"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb385-1"><a href="daten-abbilden-mit-ggplot2.html#cb385-1" tabindex="-1"></a><span class="fu">ggplot</span>(vdata) <span class="sc">+</span> </span>
 <span id="cb385-2"><a href="daten-abbilden-mit-ggplot2.html#cb385-2" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> F1) <span class="sc">+</span> </span>
 <span id="cb385-3"><a href="daten-abbilden-mit-ggplot2.html#cb385-3" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
-<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value
 ## `binwidth`.</code></pre>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-119-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-119-1.svg" alt="" width="672" /></p>
 <p>Wir können auch selbst bestimmen, wie breit die Balken sein sollen, nämlich mit <code>binwidth</code>. Im Moment umfasst ein Balken ca. 40 Hz. Die folgenden Abbildungen zeigen die exakt selben Daten, aber mit Balken von 10 Hz und Balken von 100 Hz:</p>
 <div class="sourceCode" id="cb387"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb387-1"><a href="daten-abbilden-mit-ggplot2.html#cb387-1" tabindex="-1"></a><span class="fu">ggplot</span>(vdata) <span class="sc">+</span> </span>
 <span id="cb387-2"><a href="daten-abbilden-mit-ggplot2.html#cb387-2" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> F1) <span class="sc">+</span> </span>
 <span id="cb387-3"><a href="daten-abbilden-mit-ggplot2.html#cb387-3" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">&quot;white&quot;</span>,</span>
 <span id="cb387-4"><a href="daten-abbilden-mit-ggplot2.html#cb387-4" tabindex="-1"></a>                 <span class="at">binwidth =</span> <span class="dv">10</span>)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-120-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-120-1.svg" alt="" width="672" /></p>
 <div class="sourceCode" id="cb388"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb388-1"><a href="daten-abbilden-mit-ggplot2.html#cb388-1" tabindex="-1"></a><span class="fu">ggplot</span>(vdata) <span class="sc">+</span> </span>
 <span id="cb388-2"><a href="daten-abbilden-mit-ggplot2.html#cb388-2" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> F1) <span class="sc">+</span> </span>
 <span id="cb388-3"><a href="daten-abbilden-mit-ggplot2.html#cb388-3" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">&quot;white&quot;</span>,</span>
 <span id="cb388-4"><a href="daten-abbilden-mit-ggplot2.html#cb388-4" tabindex="-1"></a>                 <span class="at">binwidth =</span> <span class="dv">100</span>)</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-120-2.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-120-2.svg" alt="" width="672" /></p>
 <p>Sie sehen, dass dies für die Repräsentation der Daten einen großen Unterschied macht – gehen Sie also immer mit Bedacht vor, wenn Sie die <em>binwidth</em> von Histogrammen verändern.</p>
 <p>Mit dem Histogramm verwandt ist die Wahrscheinlichkeitsdichte (engl. <em>probability density</em>). Die einzige Änderung, die wir dafür vornehmen müssen, ist <code>aes()</code> das Argument <code>y = ..density..</code> zu übergeben. Dies verändert die y-Achse so, dass statt der Anzahl an Datenpunkten die Wahrscheinlichkeitsdichte der Datenpunkte angezeigt wird. <em>Per definitionem</em> ist die Fläche unter den Balken der Wahrscheinlichkeitsdichte insgesamt 1.</p>
 <div class="sourceCode" id="cb389"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb389-1"><a href="daten-abbilden-mit-ggplot2.html#cb389-1" tabindex="-1"></a><span class="fu">ggplot</span>(vdata) <span class="sc">+</span> </span>
@@ -427,10 +433,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## Warning: The dot-dot notation (`..density..`) was deprecated in
 ## ggplot2 3.4.0.
 ## ℹ Please use `after_stat(density)` instead.
-## This warning is displayed once every 8 hours.
+## This warning is displayed once per session.
 ## Call `lifecycle::last_lifecycle_warnings()` to see
 ## where this warning was generated.</code></pre>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-121-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-121-1.svg" alt="" width="672" /></p>
 <p>Die Wahrscheinlichkeitsdichte wird berechnet als <code>count / (n * binwidth)</code>, wo <code>n</code> die Anzahl aller Datenpunkte ist. In dem Histogramm oben (mit <code>binwidth = 100</code>) liegen zum Beispiel 285 Datenpunkte (<em>count</em>) im Wertebereich zwischen 150 Hz und 250 Hz. Die Wahrscheinlichkeitsdichte für diesen Balken wird also wie folgt berechnet:</p>
 <div class="sourceCode" id="cb391"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb391-1"><a href="daten-abbilden-mit-ggplot2.html#cb391-1" tabindex="-1"></a>count <span class="ot">&lt;-</span> <span class="dv">285</span></span>
 <span id="cb391-2"><a href="daten-abbilden-mit-ggplot2.html#cb391-2" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(vdata)</span>
@@ -448,7 +454,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb395"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb395-1"><a href="daten-abbilden-mit-ggplot2.html#cb395-1" tabindex="-1"></a><span class="fu">ggplot</span>(vdata) <span class="sc">+</span> </span>
 <span id="cb395-2"><a href="daten-abbilden-mit-ggplot2.html#cb395-2" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> F1) <span class="sc">+</span> </span>
 <span id="cb395-3"><a href="daten-abbilden-mit-ggplot2.html#cb395-3" tabindex="-1"></a>  <span class="fu">geom_density</span>()</span></code></pre></div>
-<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-124-1.svg" width="672" /></p>
+<p><img src="programmieren_statistik_r_files/figure-html/unnamed-chunk-124-1.svg" alt="" width="672" /></p>
 <p>Hier gilt genau wie bei dem Histogramm mit der Wahrscheinlichkeitsdichte, dass das Integral (die Fläche) unter der Kurve 1 ist.</p>
 <div class="gray">
 <p><strong>Weiterführende Infos: Histogramme und Probability Density</strong></p>
